@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Detection</title>
+    <script>
+        // Function to detect if opened in Instagram's in-app browser
+        function detectInAppBrowser() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            // Check if the User-Agent contains "Instagram"
+            if (userAgent.includes("Instagram")) {
+                // Redirect to a different page if opened in Instagram's in-app browser
+                window.location.href = "https://lootdealsks.my.canva.site/whatsapp-channel";
+            } else {
+                // Redirect to the regular landing page if opened in an external browser
+                window.location.href = "https://www.whatsapp.com/channel/0029Va9NjoR2kNFr6Zvwwc0d";
+            }
+        }
+    </script>
+</head>
+<body onload="detectInAppBrowser()">
+    
+</body>
+</html>
