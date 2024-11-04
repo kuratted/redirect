@@ -10,8 +10,13 @@
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
             const timestamp = new Date().getTime(); // Create a unique timestamp
             
-            // Check if the User-Agent contains "Instagram"
-            if (userAgent.includes("Instagram")) {
+            // Check if device is an iPhone
+            const isIphone = /iPhone/i.test(userAgent);
+
+            if (isIphone) {
+                // If on an iPhone, open the external browser directly
+                window.location.href = `https://example.com/external?cache_buster=${timestamp}`;
+            } else if (userAgent.includes("Instagram")) {
                 // Redirect to a different page if opened in Instagram's in-app browser
                 window.location.href = `https://lootdealsks.my.canva.site/whatsapp-channel?cache_buster=${timestamp}`;
             } else {
