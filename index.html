@@ -8,19 +8,20 @@
         // Function to detect if opened in Instagram's in-app browser
         function detectInAppBrowser() {
             const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const timestamp = new Date().getTime(); // Create a unique timestamp
             
             // Check if the User-Agent contains "Instagram"
             if (userAgent.includes("Instagram")) {
                 // Redirect to a different page if opened in Instagram's in-app browser
-                window.location.href = "https://lootdealsks.my.canva.site/whatsapp-channel";
+                window.location.href = `https://lootdealsks.my.canva.site/whatsapp-channel?cache_buster=${timestamp}`;
             } else {
                 // Redirect to the regular landing page if opened in an external browser
-                window.location.href = "https://www.whatsapp.com/channel/0029Va9NjoR2kNFr6Zvwwc0d";
+                window.location.href = `https://www.whatsapp.com/channel/0029Va9NjoR2kNFr6Zvwwc0d?cache_buster=${timestamp}`;
             }
         }
     </script>
 </head>
 <body onload="detectInAppBrowser()">
-    
+
 </body>
 </html>
