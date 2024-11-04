@@ -33,10 +33,13 @@
             width: 56.25vh; /* 9:16 aspect ratio */
             height: 100vh;
             max-width: 100vw;
-            background: src(images/open.png) center center / cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
 
-        /* Adjust for landscape viewports */
+        /* Responsive adjustment for landscape viewports */
         @media (min-aspect-ratio: 9/16) {
             .aspect-ratio-inner {
                 width: 100vw;
@@ -44,12 +47,21 @@
                 max-height: 100vh;
             }
         }
+
+        /* Styling for the image to fit and cover */
+        .aspect-ratio-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
 
 <div class="aspect-ratio-container">
-    <div class="aspect-ratio-inner"></div>
+    <div class="aspect-ratio-inner">
+        <img src="images/open.png" alt="Cover Image">
+    </div>
 </div>
 
 </body>
