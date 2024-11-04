@@ -3,47 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-Screen 9:16 Aspect Ratio</title>
+    <title>Open External Browser</title>
     <style>
-        /* Basic reset for body */
+        /* Reset body and html */
         body, html {
             margin: 0;
             padding: 0;
             overflow: hidden;
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             background-color: #fff;
+            display: flex;
+            align-items: flex-start; /* Align content to the top */
+            justify-content: center;
         }
 
-        /* Container for maintaining aspect ratio */
+        /* Container to maintain aspect ratio */
         .aspect-ratio-container {
             width: 100vw;
             height: 100vh;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #fff;
-            overflow: hidden;
-        }
-
-        /* Inner element with 9:16 aspect ratio */
-        .aspect-ratio-inner {
-            width: 100%; /* Allow the inner to take full width */
-            height: 100%; /* Allow the inner to take full height */
-            display: flex;
-            align-items: center;
+            align-items: flex-start; /* Align content to the top */
             justify-content: center;
             overflow: hidden;
         }
 
-        /* Styling for the image to ensure it is fully visible */
+        /* Ensure image is fully visible */
         .aspect-ratio-inner img {
             max-width: 100%;
             max-height: 100%;
-            object-fit: contain; /* Ensure the whole image is visible */
-            display: block; /* Prevent extra space below the image */
+            object-fit: contain;
+            display: block;
         }
     </style>
 </head>
